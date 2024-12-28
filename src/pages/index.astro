@@ -1,0 +1,59 @@
+---
+import Gallery from "../components/Gallery.astro";
+import Hero from "../components/Hero.astro";
+import MembersMsg from "../components/MembersMsg.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<main class="px-10">
+		<SectionContainer classAdd="py-28 sm:py-72" id="home">
+			<Hero />
+		</SectionContainer>
+		<SectionContainer classAdd="pb-80">
+			<div class="w-auto flex justify-center items-center">
+				<a href="#messages">
+					<img
+						src="arrow-circle-down.svg"
+						alt="arrow"
+						class="w-14 h-14 animate-bounce"
+					/>
+				</a>
+			</div>
+		</SectionContainer>
+		<SectionContainer classAdd="py-20" id="messages">
+			<MembersMsg />
+			<a target="_blank" href="https://www.skool.com/deepdiveenglish"
+				><button
+					class="text-white flex justify-center m-auto mt-16"
+					data-aos="zoom-in"
+				>
+					Send a message to Sam</button
+				></a
+			>
+		</SectionContainer>
+		<SectionContainer classAdd="py-32">
+			<h1
+				class="text-white text-center font-extrabold text-lg sm:text-3xl pb-10"
+			>
+				'It is good people who make good places.' ―Anna Sewell
+			</h1>
+			<Gallery />
+		</SectionContainer>
+		<SectionContainer classAdd="py-20" id="meme">
+			<div class="flex m-auto justify-center" data-aos="fade-up">
+				<a
+					target="_blank"
+					href="https://youtu.be/K2VzuA6UZ7A?si=7gNlMd4FbRdG2M6-"
+				>
+					<img
+						class="shadow-lg shadow-amber-400 rounded-md"
+						src="meme.jpg"
+						alt="meme"
+					/>
+				</a>
+			</div>
+		</SectionContainer>
+	</main>
+</Layout>

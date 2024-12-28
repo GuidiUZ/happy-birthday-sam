@@ -1,0 +1,23 @@
+---
+const { name, image, quote, user } = Astro.props;
+---
+
+<div
+    class="bg-[#ffba2f] rounded-xl p-5 shadow-sm shadow-amber-400 hover:scale-105 hover:duration-500"
+>
+    <a target="_blank" href={user}>
+        <div class="flex flex-row items-center pb-3">
+            <img
+                class="h-14 w-14 rounded-full mr-5 object-cover"
+                src={image}
+                alt="profile picture"
+            />
+            <p class="text-black font-extrabold text-lg">{name}</p>
+        </div>
+        <div class="flex">
+            <p class="text-black font-semibold text-md">
+                {quote}
+            </p>
+        </div>
+    </a>
+</div>
